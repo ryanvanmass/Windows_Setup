@@ -13,7 +13,7 @@ choco install git -y
 
 choco install vscode -y
 
-choco install ringcentral-classic -y
+choco install ringcentral-classic -y --ignore-checksum
 
 choco install vim -y
 
