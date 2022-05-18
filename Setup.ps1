@@ -24,3 +24,5 @@ choco install drawio -y
 choco install gimp -y
 
 choco install powertoys -y
+
+choco install microsoft-windows-terminal -y
