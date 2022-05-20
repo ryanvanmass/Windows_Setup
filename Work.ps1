@@ -7,5 +7,3 @@ choco install dropbox -y
 choco install zoom -y
 
 choco install teamviewer -y
-
-choco install 
