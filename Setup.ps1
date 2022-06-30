@@ -25,8 +25,4 @@ choco install gimp -y
 
 choco install powertoys -y
 
-choco install microsoft-windows-terminal -y
-
 choco install googledrive -y
-
-choco install virt-viewer -y
