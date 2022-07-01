@@ -26,5 +26,3 @@ choco install gimp -y
 choco install powertoys -y
 
 choco install googledrive -y
-
-choco install vlc -y
