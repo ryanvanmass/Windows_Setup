@@ -5,6 +5,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/m2GrjeLPfcfqPrr/download/terminal.ico -OutFile "C:\Users\ryan\Pictures\terminal.ico"
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/download/Dropdown%20Terminal.lnk -OutFile "C:\Users\ryan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Dropdown Terminal.lnk"
 
+# Configure Oh My Posh - Powershell
+mkdir C:\Users\ryan\Documents\WindowsPowerShell\
+Write-Output "oh-my-posh init pwsh --config "C:\Users\ryan\Downloads\Theme.omp.json" | Invoke-Expression" >> Microsoft.PowerShell_profile.ps1
+winget install JanDeDobbeleer.OhMyPosh -s winget
+choco install nerd-fonts-3270 -y
+Set-ExecutionPolicy Unrestricted
 
 # Install Software
 choco install GoogleChrome -y
