@@ -8,7 +8,7 @@ Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/dow
 # Configure Oh My Posh - Powershell
 mkdir C:\Users\ryan\Documents\WindowsPowerShell\
 Write-Output "oh-my-posh init pwsh --config "C:\Users\ryan\Downloads\Theme.omp.json" | Invoke-Expression" >> Microsoft.PowerShell_profile.ps1
-winget install JanDeDobbeleer.OhMyPosh -s winget
+choco install oh-my-posh -y
 choco install nerd-fonts-3270 -y
 Set-ExecutionPolicy Unrestricted
 
