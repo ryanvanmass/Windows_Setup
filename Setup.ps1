@@ -13,7 +13,7 @@ Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowe
 #Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/n2P7q6mb7RLSrJQ/download/Powershell_Profile.ps1 -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 choco install oh-my-posh -y
-choco install nerd-fonts-3270 -y
+choco install firacodenf -y
 Set-ExecutionPolicy Unrestricted
 
 # Install Software
