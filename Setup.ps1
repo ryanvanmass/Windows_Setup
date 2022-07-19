@@ -5,6 +5,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/m2GrjeLPfcfqPrr/download/terminal.ico -OutFile "C:\Users\ryan\Pictures\terminal.ico"
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/download/Dropdown%20Terminal.lnk -OutFile "C:\Users\ryan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Dropdown Terminal.lnk"
 
+# Configure Oh My Posh - Powershell
+mkdir C:\Users\ryan\Documents\WindowsPowerShell\
+Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json
+Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+#Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/n2P7q6mb7RLSrJQ/download/Powershell_Profile.ps1 -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+choco install oh-my-posh -y
+choco install firacodenf -y
+Set-ExecutionPolicy Unrestricted
 
 # Install Software
 choco install GoogleChrome -y
