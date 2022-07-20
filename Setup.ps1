@@ -10,11 +10,14 @@ mkdir C:\Users\ryan\Documents\WindowsPowerShell\
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json
 Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
-#Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/n2P7q6mb7RLSrJQ/download/Powershell_Profile.ps1 -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-
 choco install oh-my-posh -y
 choco install firacodenf -y
 Set-ExecutionPolicy Unrestricted
+
+# Configure Windows Terminal
+mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/k23yLKXYjEaYZWG/download/settings.json -OutFile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+choco install microsoft-windows-terminal -y
 
 # Install Software
 choco install GoogleChrome -y
@@ -44,5 +47,3 @@ choco install powertoys -y
 choco install googledrive -y
 
 choco install vlc -y
-
-choco install microsoft-windows-terminal -y
