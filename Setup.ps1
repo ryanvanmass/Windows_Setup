@@ -16,7 +16,7 @@ Set-ExecutionPolicy Unrestricted
 
 # Configure Windows Terminal
 mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
-Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/k23yLKXYjEaYZWG/download/settings.json -OutFile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json -OutFile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 choco install microsoft-windows-terminal -y
 
 # Install Software
