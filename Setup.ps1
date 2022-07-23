@@ -47,3 +47,5 @@ choco install powertoys -y
 choco install googledrive -y
 
 choco install vlc -y
+
+choco install gsudo -y
