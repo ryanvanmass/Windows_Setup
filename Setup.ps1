@@ -19,6 +19,15 @@ mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json -OutFile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 choco install microsoft-windows-terminal -y
 
+# WSL Configuration
+$WSL_Check=Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux | Select -ExpandProperty State # Caches the variable if WSL is enabled or not
+
+if($WSL_Check -eq "Enabled"){
+Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/Linux_Shell.sh -Outfile \\wsl$\Ubuntu\home\ryan\Linux_Shell.sh
+}
+
+
+
 # Install Software
 choco install GoogleChrome -y
 
