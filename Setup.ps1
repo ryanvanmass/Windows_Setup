@@ -24,6 +24,8 @@ $WSL_Check=Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Sub
 
 if($WSL_Check -eq "Enabled"){
 Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/Linux_Shell.sh -Outfile \\wsl$\Ubuntu\home\ryan\Linux_Shell.sh
+wsl -u root chmod +x /home/ryan/Linux_Shell.sh
+wsl -u root sh /home/ryan/Linux_Shell.sh
 }
 
 
