@@ -5,6 +5,6 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 
 # Download Theme
 wget http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json -O /home/ryan/Theme.omp.json
-chown ryan /home/ryan/Theme.omp.json
+sudo chown ryan /home/ryan/Theme.omp.json
 
 echo 'eval "$(oh-my-posh init bash --config ~/Theme.omp.json)"' >> /home/ryan/.bashrc
