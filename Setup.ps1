@@ -16,7 +16,7 @@ Set-ExecutionPolicy Unrestricted
 
 # Configure Ppowershell Profile
 # Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-
+Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1?token=GHSAT0AAAAAABWVABHMUXUWDTU7T2F6CTSKYXHB3AQ -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 
 ## Configure Windows Terminal ##
