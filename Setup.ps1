@@ -1,6 +1,7 @@
-# Install Chocolatey
+### Install Chocolatey ### 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+### Configure Terminal and Prompt ###
 # Set up Drop Down Terminal
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/m2GrjeLPfcfqPrr/download/terminal.ico -OutFile "C:\Users\ryan\Pictures\terminal.ico"
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/download/Dropdown%20Terminal.lnk -OutFile "C:\Users\ryan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Dropdown Terminal.lnk"
@@ -30,7 +31,7 @@ wsl -u root sh /home/ryan/Linux_Shell.sh
 
 
 
-# Install Software
+### Install Software ###
 choco install GoogleChrome -y
 
 choco install putty -y
