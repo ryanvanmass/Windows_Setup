@@ -24,18 +24,15 @@ system('choco install firacodenf -y')
 system('Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
-RPROT_PROT=3389
+RPORT_PORT=3389
 RPORT_URL="Test.test"
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
 
 open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
 open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("# Carrionspike Alias")
 open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("$CarrionSpike=RPORT_URL:RPORT_PORT")
+open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("$CarrionSpike=",RPORT_URL,":",RPORT_PORT)
 
-
-Write-Output "# Carrionspike Tailscale Alias" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-Write-Output "$CarrionSpike=${RPORT_URL}:${RPORT_PORT}" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 ## Configure Windows Terminal ##
 mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
