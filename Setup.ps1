@@ -1,3 +1,11 @@
+### Runtime Variables ###
+param (
+    $RPORT_URL,
+    $RPORT_PORT
+)
+
+
+
 ### Install Chocolatey ### 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
@@ -16,8 +24,9 @@ Set-ExecutionPolicy Unrestricted
 
 # Configure Ppowershell Profile
 # Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1?token=GHSAT0AAAAAABWVABHMUXUWDTU7T2F6CTSKYXHB3AQ -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-
+Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1 -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Write-Output "# Carrionspike Tailscale Alias" >> C:\Windows\System32\Drivers\etc\hosts
+Write-Output "$RPORT_URL:$RPORT_PORT" >> C:\Windows\System32\Drivers\etc\hosts
 
 ## Configure Windows Terminal ##
 mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
