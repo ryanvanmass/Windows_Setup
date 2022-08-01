@@ -26,7 +26,7 @@ Set-ExecutionPolicy Unrestricted
 # Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1 -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Write-Output "# Carrionspike Tailscale Alias" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-Write-Output "$CarrionSpike.tailscale=${RPORT_URL}:${RPORT_PORT}" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Write-Output "$CarrionSpike=${RPORT_URL}:${RPORT_PORT}" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 ## Configure Windows Terminal ##
 mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
