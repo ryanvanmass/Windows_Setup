@@ -35,48 +35,48 @@ open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
 
 
 ## Configure Windows Terminal ##
-mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
-Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json -OutFile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
-choco install microsoft-windows-terminal -y
+mkdir ('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
+system('choco install microsoft-windows-terminal -y')
 
 ## WSL Configuration ##
-$WSL_Check=Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux | Select -ExpandProperty State # Caches the variable if WSL is enabled or not
+#$WSL_Check=Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux | Select -ExpandProperty State # Caches the variable if WSL is enabled or not
 
-if($WSL_Check -eq "Enabled"){
-Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/Linux_Shell.sh -Outfile \\wsl$\Ubuntu\home\ryan\Linux_Shell.sh
-wsl -u root chmod +x /home/ryan/Linux_Shell.sh
-wsl -u root sh /home/ryan/Linux_Shell.sh
-}
+#if($WSL_Check -eq "Enabled"){
+#Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/Linux_Shell.sh -Outfile \\wsl$\Ubuntu\home\ryan\Linux_Shell.sh
+#wsl -u root chmod +x /home/ryan/Linux_Shell.sh
+#wsl -u root sh /home/ryan/Linux_Shell.sh
+#}
 
 
 
 ### Install Software ###
-choco install GoogleChrome -y
+system('choco install GoogleChrome -y')
 
-choco install putty -y
+system('choco install putty -y')
 
-choco install winscp -y
+system('choco install winscp -y')
 
-choco install advanced-ipscanner -y
+system('choco install advanced-ipscanner -y')
 
-choco install git -y
+system('choco install git -y')
 
-choco install vscode -y
+system('choco install vscode -y')
 
-choco install ringcentral-classic -y --ignore-checksum
+system('choco install ringcentral-classic -y --ignore-checksum')
 
-choco install vim -y
+system('choco install vim -y')
 
-choco install sysinternals -y
+system('choco install sysinternals -y')
 
-choco install drawio -y
+system('choco install drawio -y')
 
-choco install gimp -y
+system('choco install gimp -y')
 
-choco install powertoys -y
+system('choco install powertoys -y')
 
-choco install googledrive -y
+system('choco install googledrive -y')
 
-choco install vlc -y
+system('choco install vlc -y')
 
-choco install gsudo -y
+system('choco install gsudo -y')
