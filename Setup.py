@@ -2,6 +2,7 @@
 from asyncore import write
 from os import system
 from os import mkdir
+from os import makedirs
 from os import path
 from urllib import request
 
@@ -40,7 +41,7 @@ open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
 
 
 ## Configure Windows Terminal ##
-mkdir ('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
+makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
 system('choco install microsoft-windows-terminal -y')
 
