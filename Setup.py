@@ -6,7 +6,7 @@ from urllib import request
 
 
 ### Install Chocolatey ### 
-system("Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex` ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))")
+system("Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))")
 
 
 ### Configure Terminal and Prompt ###
