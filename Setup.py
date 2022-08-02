@@ -17,7 +17,7 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/
 ## Configure Powershell Prompt ##
 # Install Oh-My-Posh
 mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', 'C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
 
 system('choco install oh-my-posh -y')
 system('choco install firacodenf -y')
