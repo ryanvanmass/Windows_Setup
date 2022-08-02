@@ -26,7 +26,7 @@ system('choco install firacodenf -y')
 system('Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
-RPORT_PORT=3389
+RPORT_PORT="3389"
 RPORT_URL="Test.test"
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
 
