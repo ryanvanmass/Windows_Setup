@@ -2,6 +2,7 @@
 from asyncore import write
 from os import system
 from os import mkdir
+from os import path
 from urllib import request
 
 
@@ -16,7 +17,8 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/
 
 ## Configure Powershell Prompt ##
 # Install Oh-My-Posh
-mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
+if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
+    mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
 
 system('choco install oh-my-posh -y')
