@@ -9,7 +9,7 @@ from os import system
 Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "gimp", "powertoys", "googledrive", "vlc", "gsudo"]
 
 for i in range(len(Packages)):
-    temp = "choco install " + Packages[i], + " -y"
+    temp = "choco install " + Packages[i] + " -y"
     system(temp)
 
 
