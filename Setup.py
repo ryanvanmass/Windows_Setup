@@ -57,32 +57,40 @@ system('choco install microsoft-windows-terminal -y')
 
 
 ### Install Software ###
-system('choco install GoogleChrome -y')
+from os import system
 
-system('choco install putty -y')
+Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "gimp", "powertoys", "googledrive", "vlc", "gsudo"]
 
-system('choco install winscp -y')
-
-system('choco install advanced-ipscanner -y')
-
-system('choco install git -y')
-
-system('choco install vscode -y')
+for i in range(len(Packages)):
+    temp = "choco install " + Packages[i] + " -y"
+    system(temp)
 
 system('choco install ringcentral-classic -y --ignore-checksum')
 
-system('choco install vim -y')
+# system('choco install GoogleChrome -y')
 
-system('choco install sysinternals -y')
+# system('choco install putty -y')
 
-system('choco install drawio -y')
+# system('choco install winscp -y')
 
-system('choco install gimp -y')
+# system('choco install advanced-ipscanner -y')
 
-system('choco install powertoys -y')
+# system('choco install git -y')
 
-system('choco install googledrive -y')
+# system('choco install vscode -y')
 
-system('choco install vlc -y')
+# system('choco install vim -y')
 
-system('choco install gsudo -y')
+# system('choco install sysinternals -y')
+
+# system('choco install drawio -y')
+
+# system('choco install gimp -y')
+
+# system('choco install powertoys -y')
+
+# system('choco install googledrive -y')
+
+# system('choco install vlc -y')
+
+# system('choco install gsudo -y')
