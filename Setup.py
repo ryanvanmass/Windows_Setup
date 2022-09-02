@@ -4,6 +4,8 @@ from os import system
 from os import mkdir
 from os import makedirs
 from os import path
+from os import remove
+from platform import win32_ver
 from urllib import request
 
 
@@ -41,8 +43,12 @@ open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
 
 
 ## Configure Windows Terminal ##
-makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
+if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
+    makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
+
+remove("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
+
 system('choco install microsoft-windows-terminal -y')
 
 ## WSL Configuration ##
@@ -57,8 +63,6 @@ system('choco install microsoft-windows-terminal -y')
 
 
 ### Install Software ###
-from os import system
-
 Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "gimp", "powertoys", "googledrive", "vlc", "gsudo"]
 
 for i in range(len(Packages)):
@@ -93,4 +97,4 @@ system('choco install ringcentral-classic -y --ignore-checksum')
 
 # system('choco install vlc -y')
 
-# system('choco install gsudo -y')
+# system('choco install gsudo -y') 
