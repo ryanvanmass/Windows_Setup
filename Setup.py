@@ -62,7 +62,7 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/
 
 
 ### Install Software ###
-Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "gimp", "powertoys", "googledrive", "vlc", "gsudo"]
+Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "powertoys", "googledrive", "vlc", "gsudo"]
 
 for i in range(len(Packages)):
     temp = "choco install " + Packages[i] + " -y"
@@ -87,8 +87,6 @@ system('choco install ringcentral-classic -y --ignore-checksum')
 # system('choco install sysinternals -y')
 
 # system('choco install drawio -y')
-
-# system('choco install gimp -y')
 
 # system('choco install powertoys -y')
 
