@@ -43,13 +43,12 @@ open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
 
 
 ## Configure Windows Terminal ##
-if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
+if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'):
     makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
+    system('choco install microsoft-windows-terminal -y')
 
 remove("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
-
-system('choco install microsoft-windows-terminal -y')
 
 ## WSL Configuration ##
 #$WSL_Check=Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux | Select -ExpandProperty State # Caches the variable if WSL is enabled or not
