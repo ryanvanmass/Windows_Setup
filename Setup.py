@@ -26,7 +26,7 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/
 
 system('choco install oh-my-posh -y')
 system('choco install firacodenf -y')
-system('Set-ExecutionPolicy Unrestricted')
+system('powershell.exe Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
 RPORT_PORT="3389"
