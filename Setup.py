@@ -29,17 +29,17 @@ system('choco install firacodenf -y')
 system('powershell.exe Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
-RPORT_PORT="3389"
-RPORT_URL="Test.test"
+# RPORT_PORT="3389"
+# RPORT_URL="Test.test"
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
 
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("# Carrionspike Alias")
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("$CarrionSpike=")
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(RPORT_URL)
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(":")
-open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(RPORT_PORT)
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("# Carrionspike Alias")
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("$CarrionSpike=")
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(RPORT_URL)
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(":")
+# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(RPORT_PORT)
 
 
 ## Configure Windows Terminal ##
