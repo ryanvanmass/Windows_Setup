@@ -1,5 +1,5 @@
 ### Library's ###
-from asyncore import write
+# from asyncore import write
 from os import system
 from os import mkdir
 from os import makedirs
@@ -29,17 +29,7 @@ system('choco install firacodenf -y')
 system('powershell.exe Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
-# RPORT_PORT="3389"
-# RPORT_URL="Test.test"
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
-
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("# Carrionspike Alias")
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("\n")
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write("$CarrionSpike=")
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(RPORT_URL)
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(":")
-# open("/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1", 'a').write(RPORT_PORT)
 
 
 ## Configure Windows Terminal ##
@@ -73,29 +63,3 @@ for i in range(len(Packages)):
     system(temp)
 
 system('choco install ringcentral-classic -y --ignore-checksum')
-
-# system('choco install GoogleChrome -y')
-
-# system('choco install putty -y')
-
-# system('choco install winscp -y')
-
-# system('choco install advanced-ipscanner -y')
-
-# system('choco install git -y')
-
-# system('choco install vscode -y')
-
-# system('choco install vim -y')
-
-# system('choco install sysinternals -y')
-
-# system('choco install drawio -y')
-
-# system('choco install powertoys -y')
-
-# system('choco install googledrive -y')
-
-# system('choco install vlc -y')
-
-# system('choco install gsudo -y') 
