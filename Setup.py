@@ -1,5 +1,4 @@
 ### Library's ###
-# from asyncore import write
 from os import system
 from os import mkdir
 from os import makedirs
@@ -10,13 +9,14 @@ from urllib import request
 
 
 ### Install Chocolatey ### 
-system("Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))")
+# system("Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))")
 
 
 ### Configure Terminal and Prompt ###
 ## Set up Drop Down Terminal ##
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/m2GrjeLPfcfqPrr/download/terminal.ico','/Users/ryan/Pictures/terminal.ico')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/download/Dropdown%20Terminal.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Dropdown Terminal.lnk')
+
 
 ## Configure Powershell Prompt ##
 # Install Oh-My-Posh
@@ -26,7 +26,7 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/
 
 system('choco install oh-my-posh -y')
 system('choco install firacodenf -y')
-system('powershell.exe Set-ExecutionPolicy Unrestricted')
+# system('powershell.exe Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
@@ -52,7 +52,6 @@ else:
 #wsl -u root chmod +x /home/ryan/Linux_Shell.sh
 #wsl -u root sh /home/ryan/Linux_Shell.sh
 #}
-
 
 
 ### Install Software ###
