@@ -29,7 +29,7 @@ system('choco install firacodenf -y')
 # system('powershell.exe Set-ExecutionPolicy Unrestricted')
 
 # Configure Ppowershell Profile
-request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
+request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
 
 
 ## Configure Windows Terminal ##
