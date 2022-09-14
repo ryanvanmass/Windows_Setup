@@ -1,25 +1,39 @@
-# Install Chocolatey
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+### Runtime Variables ###
+param (
+    $RPORT_URL,
+    $RPORT_PORT
+)
 
-# Set up Drop Down Terminal
+
+
+### Install Chocolatey ### 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex` ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+### Configure Terminal and Prompt ###
+## Set up Drop Down Terminal ##
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/m2GrjeLPfcfqPrr/download/terminal.ico -OutFile "C:\Users\ryan\Pictures\terminal.ico"
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/download/Dropdown%20Terminal.lnk -OutFile "C:\Users\ryan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Dropdown Terminal.lnk"
 
-# Configure Oh My Posh - Powershell
+## Configure Powershell Prompt ##
+# Install Oh-My-Posh
 mkdir C:\Users\ryan\Documents\WindowsPowerShell\
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json
-Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-
 choco install oh-my-posh -y
 choco install firacodenf -y
 Set-ExecutionPolicy Unrestricted
 
-# Configure Windows Terminal
+# Configure Ppowershell Profile
+# Write-Output 'oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression' >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Invoke-WebRequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/test/PowerShell_profile.ps1 -OutFile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Write-Output "# Carrionspike Tailscale Alias" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Write-Output "$CarrionSpike=${RPORT_URL}:${RPORT_PORT}" >> C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+## Configure Windows Terminal ##
 mkdir -p C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 Invoke-WebRequest http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json -OutFile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 choco install microsoft-windows-terminal -y
 
-# WSL Configuration
+## WSL Configuration ##
 $WSL_Check=Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux | Select -ExpandProperty State # Caches the variable if WSL is enabled or not
 
 if($WSL_Check -eq "Enabled"){
@@ -30,7 +44,7 @@ wsl -u root sh /home/ryan/Linux_Shell.sh
 
 
 
-# Install Software
+### Install Software ###
 choco install GoogleChrome -y
 
 choco install putty -y
