@@ -55,7 +55,7 @@ else:
 
 
 ### Install Software ###
-Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "powertoys", "googledrive", "vlc", "gsudo", "virt-viewer"]
+Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "powertoys", "googledrive", "vlc", "gsudo", "virt-viewer", "TeamViewer"]
 
 for i in range(len(Packages)):
     temp = "choco install " + Packages[i] + " -y"
