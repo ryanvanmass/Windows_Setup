@@ -5,7 +5,10 @@ function rdp([string]$H)
      mstsc /v $H
 }
 
-
+function uptime {
+        Get-WmiObject win32_operatingsystem | select csname, @{LABEL='LastBootUpTime';
+        EXPRESSION={$_.ConverttoDateTime($_.lastbootuptime)}}
+}
 
 
 
