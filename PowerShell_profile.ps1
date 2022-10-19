@@ -1,6 +1,3 @@
-### Enable Oh-My-Posh ###
-oh-my-posh init pwsh --config "C:\Users\ryan.rdvm\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression
-
 ### ALIAS ###
 # RDP Alias
 function rdp([string]$H)
@@ -8,6 +5,12 @@ function rdp([string]$H)
      mstsc /v $H
 }
 
-# VNC Alias
 
 
+
+
+
+
+
+### Enable Oh-My-Posh ###
+oh-my-posh init pwsh --config "C:\Users\ryan.rdvm\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression
