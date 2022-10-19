@@ -10,7 +10,9 @@ function uptime {
         EXPRESSION={$_.ConverttoDateTime($_.lastbootuptime)}}
 }
 
-
+function df {
+        get-volume
+}
 
 
 
