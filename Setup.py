@@ -46,10 +46,11 @@ else:
 
 
 ### Install Software ###
-Packages = ["GoogleChrome", "putty", "winscp", "advanced-ipscanner", "git", "vscode", "vim", "sysinternals", "drawio", "powertoys", "googledrive", "vlc", "gsudo", "virt-viewer", "TeamViewer"]
+## 9P7KNL5RWT25 = Sysinternals
+Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer"]
 
 for i in range(len(Packages)):
-    temp = "choco install " + Packages[i] + " -y"
+    temp = "winget install " + Packages[i] + " -y"
     system(temp)
 
 system('choco install ringcentral-classic -y --ignore-checksum')
