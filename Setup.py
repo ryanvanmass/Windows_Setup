@@ -6,7 +6,8 @@ from os import path
 from os import remove
 from platform import win32_ver
 from urllib import request
-
+from shutil import unpack_archive
+from shutil import copy
 
 ### Install Chocolatey ### 
 # system("Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))")
@@ -25,8 +26,16 @@ if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
 
 system('winget install JanDeDobbeleer.ohmyposh -y')
-system('choco install firacodenf -y')
-# system('powershell.exe Set-ExecutionPolicy Unrestricted')
+
+
+# Font Install
+request.urlretrieve ('https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip','/Users/ryan/Downloads/fonts.zip')
+unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
+
+remove('/Users/ryan/Downloads/fonts/Readme.md')
+copy ('/Users/ryan/Downloads/fonts/*','/Windows/Fonts')
+
+
 
 # Configure Ppowershell Profile
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
