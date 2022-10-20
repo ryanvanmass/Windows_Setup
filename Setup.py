@@ -33,7 +33,7 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/baotyKMF6w2D6Cp/
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
 
-FontFolder = os.listdir('/Users/ryan/Downloads/fonts')
+FontFolder = listdir('/Users/ryan/Downloads/fonts')
 for i in range(len(FontFolder)):
 	temp = "/Users/ryan/Downloads/fonts/" + FontFolder[i]
 	InstallFont.install_font(temp)
