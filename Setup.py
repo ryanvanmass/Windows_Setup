@@ -24,7 +24,7 @@ if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
     mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
 
-system('choco install oh-my-posh -y')
+system('winget install JanDeDobbeleer.ohmyposh -y')
 system('choco install firacodenf -y')
 # system('powershell.exe Set-ExecutionPolicy Unrestricted')
 
@@ -53,4 +53,4 @@ for i in range(len(Packages)):
     temp = "winget install " + Packages[i] + " -y"
     system(temp)
 
-system('choco install ringcentral-classic -y --ignore-checksum')
+system('winget install RingCentral.RingCentral -y --ignore-checksum')
