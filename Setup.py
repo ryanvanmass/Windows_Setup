@@ -5,7 +5,6 @@ from os import makedirs
 from os import path
 from os import remove
 from os import listdir
-from platform import win32_ver
 from urllib import request
 from shutil import unpack_archive
 from shutil import copy
