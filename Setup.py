@@ -10,6 +10,8 @@ from urllib import request
 from shutil import unpack_archive
 from shutil import copy
 
+### Import Additional Scripts ###
+import InstallFont
 
 ### Configure Terminal and Prompt ###
 ## Set up Drop Down Terminal ##
@@ -30,9 +32,11 @@ system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/baotyKMF6w2D6Cp/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
-fonts = listdir('/Users/ryan/Downloads/fonts')
-for i in range(len(fonts)):
-    temp = 'powershell -command "(New-Object -ComObject Shell.Application).Namespace(0x14).CopyHere(C:\Users\ryan\Downloads\fonts\"' + fonts[i] + ",0x14);"
+
+FontFolder = os.listdir('/Users/ryan/Downloads/fonts')
+for i in range(len(FontFolder)):
+	temp = "/Users/ryan/Downloads/fonts/" + FontFolder[i]
+	InstallFont.install_font(temp)
 
 
 
