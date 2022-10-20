@@ -26,7 +26,7 @@ system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 
 
 # Font Install
-system('powershell -command "Invoke-Webrequest https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip -Outfile C:\Users\ryan\Downloads\fonts.zip"')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/baotyKMF6w2D6Cp/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
 remove('/Users/ryan/Downloads/fonts/Readme.md')
