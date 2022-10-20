@@ -4,6 +4,7 @@ from os import mkdir
 from os import makedirs
 from os import path
 from os import remove
+from os import listdir
 from platform import win32_ver
 from urllib import request
 from shutil import unpack_archive
@@ -29,8 +30,9 @@ system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/baotyKMF6w2D6Cp/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
-remove('/Users/ryan/Downloads/fonts/Readme.md')
-copy ('/Users/ryan/Downloads/fonts/*','/Windows/Fonts')
+fonts = listdir('/Users/ryan/Downloads/fonts')
+for i in range(len(fonts)):
+    temp = 'powershell -command "(New-Object -ComObject Shell.Application).Namespace(0x14).CopyHere(C:\Users\ryan\Downloads\fonts\"' + fonts[i] + ",0x14);"
 
 
 
