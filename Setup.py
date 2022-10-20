@@ -22,7 +22,7 @@ if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
     mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
 
-system('winget install JanDeDobbeleer.ohmyposh --accept-package-aggreements')
+system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 
 
 # Font Install
@@ -56,7 +56,7 @@ else:
 Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer"]
 
 for i in range(len(Packages)):
-    temp = "winget install " + Packages[i] + " --accept-package-aggreements"
+    temp = "winget install " + Packages[i] + " --accept-package-agreements"
     system(temp)
 
-system('winget install RingCentral.RingCentral --accept-package-aggreements --ignore-checksum')
+system('winget install RingCentral.RingCentral --accept-package-agreements --ignore-checksum')
