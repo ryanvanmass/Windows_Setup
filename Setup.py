@@ -26,6 +26,8 @@ request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/
 
 system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 
+system('powershell -command "Set-ExecutionPolicy Unrestricted')
+
 
 # Font Install
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/baotyKMF6w2D6Cp/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip')
@@ -48,7 +50,7 @@ request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup
 ## Configure Windows Terminal ##
 if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'):
     makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
-    system('winget install Microsoft.WindowsTerminal -y')
+    system('winget install Microsoft.WindowsTerminal --accept-package-agreements')
 
 if not path.exists("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"):
     request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
