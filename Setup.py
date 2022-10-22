@@ -62,10 +62,9 @@ else:
 
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
-Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer"]
+Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RingCentral.RingCentral"]
 
 for i in range(len(Packages)):
     temp = "winget install " + Packages[i] + " --accept-package-agreements"
     system(temp)
 
-system('winget install RingCentral.RingCentral --accept-package-agreements --ignore-checksum')
