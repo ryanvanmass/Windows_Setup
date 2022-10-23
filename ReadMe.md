@@ -1,6 +1,10 @@
 # Install
 **NOTE:** Must be run as an administrator
+1. Download most recent release
+2. Unzip Archive
+3. Run the following commands
 ```
-	Invoke-Webrequest https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/Setup.ps1 -Outfile Setup.ps1
-	Set-ExecutionPolicy Bypass -Scope Process -Force; .\Setup.ps1
+	winget install python.python.3.10
+	# Relaunch Terminal
+	python Setup.py
 ```
