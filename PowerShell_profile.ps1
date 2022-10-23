@@ -18,4 +18,4 @@ function df {
 
 
 ### Enable Oh-My-Posh ###
-oh-my-posh init pwsh --config "C:\Users\ryan.rdvm\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "C:\Users\ryan\Documents\WindowsPowerShell\Theme.omp.json" | Invoke-Expression
