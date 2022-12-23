@@ -14,15 +14,15 @@ import InstallFont
 
 ### Configure Terminal and Prompt ###
 ## Set up Drop Down Terminal ##
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/m2GrjeLPfcfqPrr/download/terminal.ico','/Users/ryan/Pictures/terminal.ico')
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/bcrMyjQZg4yDiAH/download/Dropdown%20Terminal.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Dropdown Terminal.lnk')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aHZH85XFwY7TC3Z/download/terminal.ico','/Users/ryan/Pictures/terminal.ico')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/fzfx8H8nPAXCF7S/download/Dropdown%20Terminal.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Dropdown Terminal.lnk')
 
 
 ## Configure Powershell Prompt ##
 # Install Oh-My-Posh
 if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
     mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/aNncBdbZf8fzmDc/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/gEAqGwzYJJjgMQH/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json')
 
 system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 
@@ -30,7 +30,7 @@ system('powershell -command "Set-ExecutionPolicy Unrestricted')
 
 
 # Font Install
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/baotyKMF6w2D6Cp/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/PnSgtoQdWjsqAes/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
 remove('/Users/ryan/Downloads/fonts/license')
@@ -53,10 +53,10 @@ if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal
     system('winget install Microsoft.WindowsTerminal --accept-package-agreements')
 
 if not path.exists("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"):
-    request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
+    request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/YKstFx8mwnzpYKF/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
 else:
     remove("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
-    request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ywxdD6CFZFDB249/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
+    request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/YKstFx8mwnzpYKF/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
 
 
 
