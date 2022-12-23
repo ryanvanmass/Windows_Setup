@@ -59,6 +59,11 @@ else:
     request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/YKstFx8mwnzpYKF/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json')
 
 
+### Update UI Customization ###
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ATf7ZAdq6E7waSN/download/UI%20Customization.reg', '/Users/ryan/Downloads/UI_Customize.reg')
+system('reg import C:\Users\ryan\Downloads\UI_Customize.reg')
+
+
 
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
