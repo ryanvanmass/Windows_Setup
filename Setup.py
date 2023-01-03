@@ -60,8 +60,8 @@ else:
 
 
 ### Update UI Customization ###
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ATf7ZAdq6E7waSN/download/UI%20Customization.reg', '/Users/ryan/Downloads/UI_Customize.reg')
-system('reg import C:\Users\ryan\Downloads\UI_Customize.reg')
+# request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/ATf7ZAdq6E7waSN/download/UI%20Customization.reg', '/Users/ryan/Downloads/UI_Customize.reg')
+# system('reg import C:\Users\ryan\Downloads\UI_Customize.reg')
 
 
 
