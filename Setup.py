@@ -73,3 +73,7 @@ for i in range(len(Packages)):
     temp = "winget install " + Packages[i] + " --accept-package-agreements"
     system(temp)
 
+
+# Install Clickpaste
+request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
+unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste/')
