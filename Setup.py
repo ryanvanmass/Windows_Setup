@@ -75,4 +75,4 @@ for i in range(len(Packages)):
 
 
 # Install Clickpaste
-request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/imSJoSDTbS8fPHp/download/ClickPaste.exe.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Programs/Startup/ClickPaste.exe.lnk')
+request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/imSJoSDTbS8fPHp/download/ClickPaste.exe.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/ClickPaste.exe.lnk')
