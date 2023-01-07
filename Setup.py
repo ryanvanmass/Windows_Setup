@@ -75,4 +75,6 @@ for i in range(len(Packages)):
 
 
 # Install Clickpaste
+request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
+unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste/')
 request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/imSJoSDTbS8fPHp/download/ClickPaste.exe.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/ClickPaste.exe.lnk')
