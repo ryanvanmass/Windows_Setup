@@ -30,7 +30,7 @@ system('powershell -command "Set-ExecutionPolicy Unrestricted')
 
 
 # Font Install
-system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/eJwXLs3wwD7PxDb/download/fonts.zip" -Outfile "C"\\Users\\ryan\\Downloads\\fonts.zip"')
+system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/eJwXLs3wwD7PxDb/download/fonts.zip" -Outfile "C:\\Users\\ryan\\Downloads\\fonts.zip"')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
 remove('/Users/ryan/Downloads/fonts/license')
