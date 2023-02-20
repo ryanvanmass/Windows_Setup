@@ -14,7 +14,7 @@ import InstallFont
 
 ### Configure Terminal and Prompt ###
 ## Set up Drop Down Terminal ##
-request.urlretrieve('https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/terminal.ico','/Users/ryan/Pictures/terminal.ico', verify=False)
+system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/terminal.ico" -Outfile "C:\\Users\\ryan\\Pictures\\terminal.ico"')
 # request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/7j3AysGHsdfXLMr/download/Dropdown%20Terminal.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Dropdown Terminal.lnk')
 
 
@@ -22,7 +22,7 @@ request.urlretrieve('https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/termi
 # Install Oh-My-Posh
 if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
     mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
-request.urlretrieve('https://edmi.app/index.php/s/YnNyGpSLfHEZsLj/download/Theme.omp.json', '/Users/ryan/Documents/WindowsPowerShell/Theme.omp.json', verify=False)
+system('Powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/YnNyGpSLfHEZsLj/download/Theme.omp.json" -Outfile "C:\\Users\\ryan\\Documents\\WindowsPowerShell\\Theme.omp.json"')
 
 system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 
@@ -30,7 +30,7 @@ system('powershell -command "Set-ExecutionPolicy Unrestricted')
 
 
 # Font Install
-request.urlretrieve('https://edmi.app/index.php/s/eJwXLs3wwD7PxDb/download/fonts.zip', '/Users/ryan/Downloads/fonts.zip', verify=False)
+system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/eJwXLs3wwD7PxDb/download/fonts.zip" -Outfile "C"\\Users\\ryan\\Downloads\\fonts.zip"')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
 remove('/Users/ryan/Downloads/fonts/license')
@@ -44,7 +44,7 @@ for i in range(len(FontFolder)):
 
 
 # Configure Powershell Profile
-request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1', verify=False)
+request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
 
 
 ## Configure Windows Terminal ##
@@ -53,10 +53,10 @@ if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal
     system('winget install Microsoft.WindowsTerminal --accept-package-agreements')
 
 if not path.exists("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"):
-    request.urlretrieve('https://edmi.app/index.php/s/qqT3fQWccgYJgbc/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json', verify=False)
+    system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/qqT3fQWccgYJgbc/download/settings.json" -Outfile "C:\\Users\\ryanAppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"')
 else:
     remove("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
-    request.urlretrieve('https://edmi.app/index.php/s/qqT3fQWccgYJgbc/download/settings.json', '/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json', verify=False)
+    system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/qqT3fQWccgYJgbc/download/settings.json" -Outfile "C:\\Users\\ryan\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"')
 
 
 ### Update UI Customization ###
@@ -77,4 +77,4 @@ for i in range(len(Packages)):
 # Install Clickpaste
 request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
 unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste/')
-request.urlretrieve('https://edmi.app/index.php/s/SYPfmz4gXEZNasj/download/ClickPaste.exe.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/ClickPaste.exe.lnk', verify=False)
+system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/SYPfmz4gXEZNasj/download/ClickPaste.exe.lnk" -Outfile "C:\\Users\\ryan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ClickPaste.exe.lnk"')
