@@ -17,18 +17,6 @@ import InstallFont
 # system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/terminal.ico" -Outfile "C:\\Users\\ryan\\Pictures\\terminal.ico"')
 # request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/7j3AysGHsdfXLMr/download/Dropdown%20Terminal.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Dropdown Terminal.lnk')
 
-
-## Configure Powershell Prompt ##
-# Install Oh-My-Posh
-if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
-    mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
-system('Powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/YnNyGpSLfHEZsLj/download/Theme.omp.json" -Outfile "C:\\Users\\ryan\\Documents\\WindowsPowerShell\\Theme.omp.json"')
-
-system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
-
-system('powershell -command "Set-ExecutionPolicy Unrestricted')
-
-
 # Font Install
 system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/eJwXLs3wwD7PxDb/download/fonts.zip" -Outfile "C:\\Users\\ryan\\Downloads\\fonts.zip"')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
@@ -78,3 +66,15 @@ for i in range(len(Packages)):
 request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
 unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste/')
 system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/SYPfmz4gXEZNasj/download/ClickPaste.exe.lnk" -Outfile "C:\\Users\\ryan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ClickPaste.exe.lnk"')
+
+
+
+## Configure Powershell Prompt ##
+# Install Oh-My-Posh
+if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
+    mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
+system('Powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/YnNyGpSLfHEZsLj/download/Theme.omp.json" -Outfile "C:\\Users\\ryan\\Documents\\WindowsPowerShell\\Theme.omp.json"')
+
+system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
+
+system('powershell -command "Set-ExecutionPolicy Unrestricted')
