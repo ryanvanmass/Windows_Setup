@@ -30,11 +30,6 @@ for i in range(len(FontFolder)):
 	InstallFont.install_font(temp)
 
 
-
-# Configure Powershell Profile
-request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
-
-
 ## Configure Windows Terminal ##
 if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'):
     makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
@@ -78,3 +73,6 @@ system('Powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/YnNyGpSLf
 system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
 
 system('powershell -command "Set-ExecutionPolicy Unrestricted')
+
+# Configure Powershell Profile
+request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
