@@ -60,7 +60,7 @@ for i in range(len(Packages)):
 # Install Clickpaste
 request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
 unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste/')
-system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/SYPfmz4gXEZNasj/download/ClickPaste.exe.lnk" -Outfile "C:\\Users\\ryan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ClickPaste.exe.lnk"')
+system("powershell.exe Invoke-Webrequest 'https://edmi.app/index.php/s/SYPfmz4gXEZNasj/download/ClickPaste.exe.lnk' -Outfile 'C:\\Users\\ryan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ClickPaste.exe.lnk'")
 
 
 
