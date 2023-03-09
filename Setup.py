@@ -56,6 +56,15 @@ for i in range(len(Packages)):
     temp = "winget install " + Packages[i] + " --accept-package-agreements"
     system(temp)
 
+## Choco Testing
+
+Packages = ["Chrome", "putty", "winscp", "AdvancedIPScanner", "git", "vscode", "vim", "drawio", "PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RubyInstallerTeam.RubyWithDevKit.3.1"]
+
+for i in range(len(Packages)):
+    temp = "choco install " + Packages[i] + " -y"
+    system(temp)
+
+system("winget install 9P7KNL5RWT25 --accept-package-agreements")
 
 # Install Clickpaste
 request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
