@@ -33,7 +33,7 @@ for i in range(len(FontFolder)):
 ## Configure Windows Terminal ##
 if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'):
     makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
-    system('winget install Microsoft.WindowsTerminal --accept-package-agreements')
+    system('choco install microsoft-windows-terminal -y')
 
 if not path.exists("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"):
     system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/qqT3fQWccgYJgbc/download/settings.json" -Outfile "C:\\Users\\ryan\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"')
@@ -58,7 +58,7 @@ else:
 
 ## Choco Testing
 
-Packages = ["Chrome", "putty", "winscp", "AdvancedIPScanner", "git", "vscode", "vim", "drawio", "PowerToys", "googledrive", "vlc", "gsudo", "TeamViewer"]
+Packages = ["chrome", "putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "googledrive", "vlc", "gsudo", "teamviewer"]
 
 for i in range(len(Packages)):
     temp = "choco install " + Packages[i] + " -y"
@@ -79,7 +79,7 @@ if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
     mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
 system('Powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/YnNyGpSLfHEZsLj/download/Theme.omp.json" -Outfile "C:\\Users\\ryan\\Documents\\WindowsPowerShell\\Theme.omp.json"')
 
-system('winget install JanDeDobbeleer.ohmyposh --accept-package-agreements')
+system('choco install oh-my-posh -y')
 
 system('powershell -command "Set-ExecutionPolicy Unrestricted')
 
