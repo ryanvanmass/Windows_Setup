@@ -50,15 +50,15 @@ else:
 
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
-Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RubyInstallerTeam.RubyWithDevKit.3.1"]
+# Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RubyInstallerTeam.RubyWithDevKit.3.1"]
 
-for i in range(len(Packages)):
-    temp = "winget install " + Packages[i] + " --accept-package-agreements"
-    system(temp)
+# for i in range(len(Packages)):
+#    temp = "winget install " + Packages[i] + " --accept-package-agreements"
+#    system(temp)
 
 ## Choco Testing
 
-Packages = ["Chrome", "putty", "winscp", "AdvancedIPScanner", "git", "vscode", "vim", "drawio", "PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RubyInstallerTeam.RubyWithDevKit.3.1"]
+Packages = ["Chrome", "putty", "winscp", "AdvancedIPScanner", "git", "vscode", "vim", "drawio", "PowerToys", "googledrive", "vlc", "gsudo", "TeamViewer"]
 
 for i in range(len(Packages)):
     temp = "choco install " + Packages[i] + " -y"
