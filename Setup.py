@@ -12,6 +12,16 @@ from shutil import copy
 ### Import Additional Scripts ###
 import InstallFont
 
+### Welcome Message ###
+print(r"""
+ _      _____ _     ____  ____  _      _____
+/ \  /|/  __// \   /   _\/  _ \/ \__/|/  __/
+| |  |||  \  | |   |  /  | / \|| |\/|||  \  
+| |/\|||  /_ | |_/\|  \_ | \_/|| |  |||  /_ 
+\_/  \|\____\\____/\____/\____/\_/  \|\____\
+                                            
+""")
+
 ### Configure Terminal and Prompt ###
 ## Set up Drop Down Terminal ##
 # system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/terminal.ico" -Outfile "C:\\Users\\ryan\\Pictures\\terminal.ico"')
