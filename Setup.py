@@ -76,6 +76,9 @@ for i in range(len(Packages)):
 
 system("winget install 9P7KNL5RWT25 --accept-package-agreements")
 
+# Enable NFS Support
+system("Enable-WindowsOptionalFeature -FeatureName ClientForNFS-Infrastructure -Online -All")
+
 # Install Clickpaste
 request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
 unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste/')
