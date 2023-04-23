@@ -12,6 +12,16 @@ from shutil import copy
 ### Import Additional Scripts ###
 import InstallFont
 
+### Welcome Message ###
+print(r"""
+ _      _____ _     ____  ____  _      _____
+/ \  /|/  __// \   /   _\/  _ \/ \__/|/  __/
+| |  |||  \  | |   |  /  | / \|| |\/|||  \  
+| |/\|||  /_ | |_/\|  \_ | \_/|| |  |||  /_ 
+\_/  \|\____\\____/\____/\____/\_/  \|\____\
+                                            
+""")
+
 ### Configure Terminal and Prompt ###
 ## Set up Drop Down Terminal ##
 # system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/terminal.ico" -Outfile "C:\\Users\\ryan\\Pictures\\terminal.ico"')
@@ -60,6 +70,9 @@ for i in range(len(Packages)):
     system(temp)
 
 system("winget install 9P7KNL5RWT25 --accept-package-agreements")
+
+# Enable NFS Support
+system("Enable-WindowsOptionalFeature -FeatureName ClientForNFS-Infrastructure -Online -All")
 
 # Install Clickpaste
 request.urlretrieve('https://github.com/Collective-Software/ClickPaste/releases/download/v1.0.1/ClickPaste_v1.0.1.zip', '/Users/ryan/Downloads/ClickPaste.zip')
