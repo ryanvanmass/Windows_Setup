@@ -63,13 +63,15 @@ else:
 
 ## Choco Testing
 
-Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "googledrive", "vlc", "gsudo", "teamviewer", "remote-desktop-client"]
+Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "googledrive", "vlc", "gsudo", "teamviewer"]
 
 for i in range(len(Packages)):
     temp = "choco install " + Packages[i] + " -y"
     system(temp)
 
 system("winget install 9P7KNL5RWT25 --accept-package-agreements")
+system("winget install Microsoft.RemoteDesktopClient --accept-package-agreements")
+
 
 # Enable NFS Support
 system("Enable-WindowsOptionalFeature -FeatureName ClientForNFS-Infrastructure -Online -All")
