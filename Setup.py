@@ -70,7 +70,6 @@ for i in range(len(Packages)):
     system(temp)
 
 system("winget install 9P7KNL5RWT25 --accept-package-agreements")
-system("winget install Microsoft.RemoteDesktopClient --accept-package-agreements")
 
 
 # Enable NFS Support
