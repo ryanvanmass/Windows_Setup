@@ -86,3 +86,5 @@ if not path.exists('/Users/ryan/Documents/PowerToys/Backup'):
      makedirs('/Users/ryan/Documents/PowerToys/Backup')
 request.urlretrieve('https://edmi.app/index.php/s/4sbfW3Gxjf6oZSK/download/PowerToysConfig.ptb', '/Users/ryan/Documents/PowerToys/Backup')
 
+## Configure WinSCP ##
+request.urlretrieve('https://edmi.app/index.php/s/Y6Y7edxZoTnnAA5/download/WinSCP.ini', '/Users/ryan/Documents/WinSCP.ini')
