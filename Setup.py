@@ -88,3 +88,6 @@ request.urlretrieve('https://edmi.app/index.php/s/4sbfW3Gxjf6oZSK/download/Power
 
 ## Configure WinSCP ##
 request.urlretrieve('https://edmi.app/index.php/s/Y6Y7edxZoTnnAA5/download/WinSCP.ini', '/Users/ryan/Documents/WinSCP.ini')
+
+## Configure Git ##
+request.urlretrieve('https://edmi.app/index.php/s/ggTkBXQykYQMc8g/download/gitconfig', '/Users/ryan/.gitconfig')
