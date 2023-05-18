@@ -22,12 +22,7 @@ print(r"""
                                             
 """)
 
-### Configure Terminal and Prompt ###
-## Set up Drop Down Terminal ##
-# system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/Fg2Z9iDQ9wak5Pz/download/terminal.ico" -Outfile "C:\\Users\\ryan\\Pictures\\terminal.ico"')
-# request.urlretrieve('http://edmi.vanmassenhoven.com/index.php/s/7j3AysGHsdfXLMr/download/Dropdown%20Terminal.lnk', '/Users/ryan/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Dropdown Terminal.lnk')
-
-# Font Install
+### Font Install ###
 system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/qnyGqr6Zxykgs9Q/download/fonts.zip" -Outfile "C:\\Users\\ryan\\Downloads\\fonts.zip"')
 unpack_archive('/Users/ryan/Downloads/fonts.zip','/Users/ryan/Downloads/fonts')
 
@@ -40,7 +35,7 @@ for i in range(len(FontFolder)):
 	InstallFont.install_font(temp)
 
 
-## Configure Windows Terminal ##
+### Configure Windows Terminal ###
 if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'):
     makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
     system('choco install microsoft-windows-terminal -y')
@@ -54,15 +49,6 @@ else:
 
 
 ### Install Software ###
-## 9P7KNL5RWT25 = Sysinternals
-# Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RubyInstallerTeam.RubyWithDevKit.3.1"]
-
-# for i in range(len(Packages)):
-#    temp = "winget install " + Packages[i] + " --accept-package-agreements"
-#    system(temp)
-
-## Choco Testing
-
 Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "googledrive", "vlc", "gsudo", "teamviewer"]
 
 for i in range(len(Packages)):
