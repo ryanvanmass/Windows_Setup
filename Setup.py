@@ -81,6 +81,11 @@ unpack_archive('/Users/ryan/Downloads/Clickpaste.zip','/Program Files/ClickPaste
 system("powershell.exe Invoke-Webrequest 'https://edmi.app/index.php/s/Mxp4Yrtt3EtwYiG/download/ClickPaste.exe.lnk' -Outfile 'C:\\Users\\ryan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ClickPaste.exe.lnk'")
 
 
+# Install MremoteNG
+request.urlretrieve('https://github.com/mRemoteNG/mRemoteNG/releases/download/2023.03.03-v1.77.3-nb/mRemoteNG-Installer-1.77.3.nb-1784.msi, /Users/ryan/Download/mRemoteNG.msi')
+system("/Users/ryan/Download/mRemoteNG.msi /quiet")
+
+
 
 ## Configure Powershell Prompt ##
 # Install Oh-My-Posh
