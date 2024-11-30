@@ -63,7 +63,7 @@ else:
 
 ## Choco Testing
 
-Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "vlc", "gsudo", "teamviewer", "moonlight-qt.install", "tailscale", "onlyoffice"]
+Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "vlc", "tailscale", "onlyoffice", "nextcloud-client"]
 
 for i in range(len(Packages)):
     temp = "choco install " + Packages[i] + " -y"
