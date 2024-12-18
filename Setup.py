@@ -98,3 +98,7 @@ system('powershell -command "Set-ExecutionPolicy Unrestricted')
 
 # Configure Powershell Profile
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
+
+### Enable Optional Features ###
+## Windows Sandbox ##
+system('dism /online /Enable-Feature /FeatureName:"Containers-DisposableClientVM" -All')
