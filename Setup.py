@@ -39,9 +39,6 @@ for i in range(len(FontFolder)):
 	temp = "/Users/ryan/Downloads/fonts/" + FontFolder[i]
 	InstallFont.install_font(temp)
 
-# Enable Windows Build in Sudo function
-sudo config --enable normal
-
 ## Configure Windows Terminal ##
 if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'):
     makedirs('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState')
