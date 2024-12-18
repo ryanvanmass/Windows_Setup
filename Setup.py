@@ -102,3 +102,6 @@ request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup
 ### Enable Optional Features ###
 ## Windows Sandbox ##
 system('dism /online /Enable-Feature /FeatureName:"Containers-DisposableClientVM" -All')
+
+## Windows Subsystem for Linux ##
+system('dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart')
