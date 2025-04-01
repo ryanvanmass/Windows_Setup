@@ -54,21 +54,21 @@ else:
 
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
-# Packages = ["Google.Chrome", "putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "google.drive", "videolan.vlc", "gerardog.gsudo", "TeamViewer.TeamViewer", "RubyInstallerTeam.RubyWithDevKit.3.1"]
+Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "TeamViewer.TeamViewer", "VivaldiTechnologies.Vivaldi", "Rufus.Rufus", "xpipe-io.xpipe"]
 
-# for i in range(len(Packages)):
-#    temp = "winget install " + Packages[i] + " --accept-package-agreements"
-#    system(temp)
+for i in range(len(Packages)):
+   temp = "winget install " + Packages[i] + " --accept-package-agreements --accept-source-agreements"
+   system(temp)
 
 ## Choco Testing
 
-Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "vlc", "tailscale", "onlyoffice", "nextcloud-client", "rufus", "Vivaldi", "xpipe"]
-
-for i in range(len(Packages)):
-    temp = "choco install " + Packages[i] + " -y"
-    system(temp)
-
-system("winget install 9P7KNL5RWT25 --accept-package-agreements")
+# Packages = ["putty", "winscp", "advanced-ip-scanner", "git", "vscode", "vim", "drawio", "PowerToys", "vlc", "tailscale", "onlyoffice", "nextcloud-client", "rufus", "Vivaldi", "xpipe"]
+# 
+# for i in range(len(Packages)):
+#     temp = "choco install " + Packages[i] + " -y"
+#     system(temp)
+# 
+# system("winget install 9P7KNL5RWT25 --accept-package-agreements")
 
 
 # Enable NFS Support
