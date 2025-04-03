@@ -54,11 +54,14 @@ else:
 
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
-Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "Microsoft.VisualStudioCode", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "TeamViewer.TeamViewer", "VivaldiTechnologies.Vivaldi", "Rufus.Rufus", "xpipe-io.xpipe"]
+Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "9P7KNL5RWT25", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "TeamViewer.TeamViewer", "VivaldiTechnologies.Vivaldi", "Rufus.Rufus", "xpipe-io.xpipe"]
 
 for i in range(len(Packages)):
    temp = "winget install " + Packages[i] + " --accept-package-agreements --accept-source-agreements"
    system(temp)
+
+system("winget install Microsoft.VisualStudioCode --override \"/verysilent /suppressmsgboxes /mergetasks='!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath'\"")
+
 
 ## Choco Testing
 
