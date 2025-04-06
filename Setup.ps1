@@ -44,5 +44,8 @@ Get-ChildItem $Packages | ForEach-Object {
 }
 
 # Install VS Code
-
 winget install Microsoft.VisualStudioCode --override "/verysilent /suppressmsgboxes /mergetasks='!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath'"
+
+# Install Clickpaste
+Invoke-WebRequest "https://github.com/Collective-Software/ClickPaste/releases/download/v1.3.0/ClickPaste_v1.3.0.zip" -OutFile C:\Users\ryan\Downloads\ClickPaste.zip
+Invoke-Webrequest 'https://edmi.app/index.php/s/Mxp4Yrtt3EtwYiG/download/ClickPaste.exe.lnk' -Outfile 'C:\Users\ryan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ClickPaste.exe.lnk'
