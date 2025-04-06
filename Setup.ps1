@@ -41,11 +41,6 @@ Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/setting
 ## Powerhsell Profile Config ##
 Invoke-Webreqeust "https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1" -Outfile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
-
-
-
-
-
 ### Package Install ###
 Get-ChildItem $Packages | ForEach-Object {
     winget install $_ --accept-package-agreements --accept-source-agreements
@@ -57,3 +52,10 @@ winget install Microsoft.VisualStudioCode --override "/verysilent /suppressmsgbo
 # Install Clickpaste
 Invoke-WebRequest "https://github.com/Collective-Software/ClickPaste/releases/download/v1.3.0/ClickPaste_v1.3.0.zip" -OutFile C:\Users\ryan\Downloads\ClickPaste.zip
 Invoke-Webrequest 'https://edmi.app/index.php/s/Mxp4Yrtt3EtwYiG/download/ClickPaste.exe.lnk' -Outfile 'C:\Users\ryan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ClickPaste.exe.lnk'
+
+## Optioanl Feature Install ##
+# Windows Sandbox
+dism /online /Enable-Feature /FeatureName:"Containers-DisposableClientVM" -All
+
+## WSL
+dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
