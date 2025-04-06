@@ -45,7 +45,7 @@ if not path.exists('/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal
     system('choco install microsoft-windows-terminal -y')
 
 if not path.exists("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"):
-    system('powershell.exe Invoke-Webrequest "https://edmi.ap`p/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "C:\\Users\\ryan\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"')
+    system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "C:\\Users\\ryan\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"')
 else:
     remove("/Users/ryan/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
     system('powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "C:\\Users\\ryan\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"')
