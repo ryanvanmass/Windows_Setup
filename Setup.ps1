@@ -2,7 +2,7 @@
 # Set the path to the folder containing the fonts
 $fontFolderPath = "C:\Users\ryan\Downloads\fonts"
 
-
+$Packages = @("putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "Google.chrome", "Rufus.Rufus", "xpipe-io.xpipe", "joplin.joplin", "tailscale.tailscale", "nextcloud.nextclouddesktop", "JanDeDobbeleer.OhMyPosh", "Romanitho.Winget-AutoUpdate", "ONLYOFFICE.DesktopEditors", "AutoHotkey.AutoHotkey", "Apple.iTunes")
 
 
 ### Functions ###
@@ -38,3 +38,11 @@ Install-FontsInFolder -folderPath $fontFolderPath
 ## Configure Windows Terminal
 Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 
+### Package Install ###
+Get-ChildItem $Packages | ForEach-Object {
+    winget install $_ --accept-package-agreements --accept-source-agreements
+}
+
+# Install VS Code
+
+winget install Microsoft.VisualStudioCode --override "/verysilent /suppressmsgboxes /mergetasks='!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath'"
