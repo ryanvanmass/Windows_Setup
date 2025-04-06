@@ -35,8 +35,16 @@ Expand-Archive -LiteralPath C:\Users\ryan\Downloads\fonts.zip -DestinationPath C
 # Call the function to install the fonts
 Install-FontsInFolder -folderPath $fontFolderPath
 
-## Configure Windows Terminal
+## Configure Windows Terminal ##
 Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile C:\Users\ryan\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+
+## Powerhsell Profile Config ##
+Invoke-Webreqeust "https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1" -Outfile C:\Users\ryan\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+
+
+
+
 
 ### Package Install ###
 Get-ChildItem $Packages | ForEach-Object {
