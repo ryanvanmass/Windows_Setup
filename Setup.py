@@ -54,7 +54,7 @@ else:
 
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
-Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "Google.chrome", "Rufus.Rufus", "xpipe-io.xpipe", "joplin.joplin", "tailscale.tailscale", "nextcloud.nextclouddesktop", "JanDeDobbeleer.OhMyPosh", "Romanitho.Winget-AutoUpdate"]
+Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "Google.chrome", "Rufus.Rufus", "xpipe-io.xpipe", "joplin.joplin", "tailscale.tailscale", "nextcloud.nextclouddesktop", "JanDeDobbeleer.OhMyPosh", "Romanitho.Winget-AutoUpdate", "ONLYOFFICE.DesktopEditors", "AutoHotkey.AutoHotkey", "Apple.iTunes"]
 
 for i in range(len(Packages)):
    temp = "winget install " + Packages[i] + " --accept-package-agreements --accept-source-agreements"
