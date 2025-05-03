@@ -96,10 +96,6 @@ if not path.exists('/Users/ryan/Documents/WindowsPowerShell/'):
     mkdir ('/Users/ryan/Documents/WindowsPowerShell/')
 system('Powershell.exe Invoke-Webrequest "https://edmi.app/index.php/s/28KsttE3yPdaBSs/download/Theme.omp.json" -Outfile "C:\\Users\\ryan\\Documents\\WindowsPowerShell\\Theme.omp.json"')
 
-system('choco install oh-my-posh -y')
-
-system('powershell -command "Set-ExecutionPolicy Unrestricted')
-
 # Configure Powershell Profile
 request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1', '/Users/ryan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1')
 
