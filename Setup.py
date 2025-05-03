@@ -55,7 +55,7 @@ else:
 ### Install Software ###
 ## 9P7KNL5RWT25 = Sysinternals
 ## 9P1741LKHQS9 = FancyWM
-Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "Google.chrome", "Rufus.Rufus", "xpipe-io.xpipe", "joplin.joplin", "tailscale.tailscale", "nextcloud.nextclouddesktop", "JanDeDobbeleer.OhMyPosh", "Romanitho.Winget-AutoUpdate", "ONLYOFFICE.DesktopEditors", "AutoHotkey.AutoHotkey", "Apple.iTunes", "9P1741LKHQS9"]
+Packages = ["putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "Google.chrome", "Rufus.Rufus", "xpipe-io.xpipe", "joplin.joplin", "tailscale.tailscale", "nextcloud.nextclouddesktop", "JanDeDobbeleer.OhMyPosh", "Romanitho.Winget-AutoUpdate", "ONLYOFFICE.DesktopEditors", "AutoHotkey.AutoHotkey", "Apple.iTunes", "9P1741LKHQS9", "Notepad++.Notepad++"]
 
 for i in range(len(Packages)):
    temp = "winget install " + Packages[i] + " --accept-package-agreements --accept-source-agreements"
@@ -108,4 +108,4 @@ request.urlretrieve('https://raw.githubusercontent.com/ryanvanmass/Windows_Setup
 system('dism /online /Enable-Feature /FeatureName:"Containers-DisposableClientVM" -All')
 
 ## Windows Subsystem for Linux ##
-system('dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart')
+# system('dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart')
