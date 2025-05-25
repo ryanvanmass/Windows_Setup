@@ -38,7 +38,7 @@ Expand-Archive -LiteralPath $CurrentDirectory\fonts.zip -DestinationPath "$Curre
 Install-FontsInFolder -folderPath $fontFolderPath
 
 ## Configure Windows Terminal ##
-Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "$CurrentUser\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings."json
+Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "$CurrentUser\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 
 ## Powerhsell Profile Config ##
 Invoke-Webreqeust "https://raw.githubusercontent.com/ryanvanmass/Windows_Setup/main/PowerShell_profile.ps1" -Outfile "$CurrentUser\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
