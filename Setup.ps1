@@ -1,6 +1,6 @@
 ### Global Variables ###
 # Set the path to the folder containing the fonts
-$fontFolderPath = "C:\Users\ryan\Downloads\fonts"
+$fontFolderPath = "$User_Dir\Downloads\fonts"
 $Packages = @("putty.putty", "winscp.winscp", "Famatech.AdvancedIPScanner", "git.git", "vim.vim", "JGraph.draw", "Microsoft.PowerToys", "videolan.vlc", "Google.chrome", "Rufus.Rufus", "xpipe-io.xpipe", "joplin.joplin", "tailscale.tailscale", "nextcloud.nextclouddesktop", "JanDeDobbeleer.OhMyPosh", "Romanitho.Winget-AutoUpdate", "ONLYOFFICE.DesktopEditors", "AutoHotkey.AutoHotkey", "Apple.iTunes")
 # $User_DIR = "$User_Dir"
 
