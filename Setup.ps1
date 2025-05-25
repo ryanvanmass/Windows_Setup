@@ -32,7 +32,7 @@ function Install-FontsInFolder {
 ### Configure Prompt ###
 ## Import Font ##
 Invoke-Webrequest "https://edmi.app/index.php/s/qnyGqr6Zxykgs9Q/download/fonts.zip" -Outfile "$CurrentDirectory\fonts.zip"
-Expand-Archive -LiteralPath $CurrentDirectory\Downloads\fonts.zip -DestinationPath "$CurrentDirectory\fonts"
+Expand-Archive -LiteralPath $CurrentDirectory\fonts.zip -DestinationPath "$CurrentDirectory\fonts"
 
 # Call the function to install the fonts
 Install-FontsInFolder -folderPath $fontFolderPath
