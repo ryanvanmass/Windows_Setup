@@ -53,7 +53,7 @@ winget install Microsoft.VisualStudioCode --override "/verysilent /suppressmsgbo
 
 # Install Clickpaste
 Invoke-WebRequest "https://github.com/Collective-Software/ClickPaste/releases/download/v1.3.0/ClickPaste_v1.3.0.zip" -OutFile "$CurrentDirectory\ClickPaste.zip"
-Invoke-Webrequest "https://edmi.app/index.php/s/Mxp4Yrtt3EtwYiG/download/ClickPaste.exe.lnk' -Outfile '$CurrentUser\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ClickPaste.exe.lnk"
+Invoke-Webrequest "https://edmi.app/index.php/s/Mxp4Yrtt3EtwYiG/download/ClickPaste.exe.lnk" -Outfile '$CurrentUser\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ClickPaste.exe.lnk"
 
 ## Optioanl Feature Install ##
 # Windows Sandbox
