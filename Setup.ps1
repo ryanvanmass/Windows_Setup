@@ -38,6 +38,7 @@ Expand-Archive -LiteralPath $CurrentDirectory\fonts.zip -DestinationPath "$Curre
 Install-FontsInFolder -folderPath $fontFolderPath 
 
 ## Configure Windows Terminal ##
+mkdir -p "$CurrentUser\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\"
 Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "$CurrentUser\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 
 ## Powerhsell Profile Config ##
