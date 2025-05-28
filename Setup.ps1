@@ -42,6 +42,7 @@ mkdir -p "$CurrentUser\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d
 Invoke-Webrequest "https://edmi.app/index.php/s/MQn4Gb6YarTrX5k/download/settings.json" -Outfile "$CurrentUser\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 
 ## Powerhsell Profile Config ##
+mkdir -p $CurrentUser\Documents\WindowsPowerShell"
 Copy-Item "$CurrentDirectory\PowerShell_Profile.ps1" "$CurrentUser\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
 ### Package Install ###
